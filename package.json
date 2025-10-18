@@ -1,0 +1,29 @@
+{
+  "name": "comparts-monorepo",
+  "version": "1.0.0",
+  "description": "Cross-Platform Computer Parts Selling App",
+  "private": true,
+  "scripts": {
+    "install:mobile": "cd mobile && npm install",
+    "install:admin": "cd admin && npm install", 
+    "install:functions": "cd functions && npm install",
+    "dev:mobile": "cd mobile && npx expo start",
+    "dev:admin": "cd admin && npm run dev",
+    "dev:functions": "cd functions && npm run serve",
+    "build:admin": "cd admin && npm run build",
+    "deploy:functions": "cd functions && firebase deploy --only functions",
+    "deploy:admin": "cd admin && npm run build && vercel --prod"
+  },
+  "keywords": [
+    "react-native",
+    "nextjs",
+    "firebase",
+    "ecommerce",
+    "computer-parts"
+  ],
+  "author": "ComParts Team",
+  "license": "MIT",
+  "devDependencies": {
+    "firebase-tools": "^12.9.1"
+  }
+}
